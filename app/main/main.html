@@ -1,0 +1,9 @@
+<section>
+    <div class="player {{player.color}}" ng-repeat="player in main.Players.playerList">
+        <span class="name">{{player.name}}</span>
+        <span class="score fade-out" ng-if="!player.transitioning">{{player.score}}</span>
+        <span class="score fade-in" ng-if="player.transitioning">{{player.scoreNext}}</span>
+        <span class="score-change up clickable" ng-click="main.Players.changeScore($index, 1)">+</span>
+        <span class="score-change down clickable" ng-click="main.Players.changeScore($index, -1)">-</span>
+    </div>
+</section>

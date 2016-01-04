@@ -1,0 +1,14 @@
+@import "bourbon/bourbon";
+
+@import "players/players";
+
+body {
+  color: white;
+  background-color: #111;
+  font-family: "Montserrat", sans-serif;
+}
+
+.clickable {
+  @include user-select(none);
+  cursor: pointer;
+}

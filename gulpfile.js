@@ -31,8 +31,6 @@ var config = {
     dirs: {
         app: 'app',
         dist: 'dist',
-        scripts: 'scripts',
-        styles: 'styles',
         tmp: '.tmp'
     },
     ports: {
@@ -62,15 +60,15 @@ gulp.task('webserver', function () {
 
 // This will do a sass compile and concat of our scss files when they change
 gulp.task('styles', function () {
-    return gulp.src('app/styles/**/*.scss')
+    return gulp.src('app/**/*.scss')
         // Do the sass compile and make sure we don't fail on errors
         .pipe(sass().on('error', sass.logError))
         // Concat into a single css file
-        .pipe(concat('main.css'))
+        .pipe(concat('app.css'))
         //catch errors
         .on('error', gutil.log)
         // Put main.css in the .tmp folder
-        .pipe(gulp.dest('.tmp/styles'))
+        .pipe(gulp.dest('.tmp'))
         // Notify LiveReload to refresh
         .pipe(livereload());
 });
@@ -102,7 +100,7 @@ gulp.task('styles-deploy', function () {
         .pipe(concat('main.css'))
         .pipe(minifyCSS())
         // Where to save our final, compressed css file
-        .pipe(gulp.dest('dist/styles'));
+        .pipe(gulp.dest('dist'));
 });
 
 // This task copies our html files over for deployment

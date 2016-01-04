@@ -1,0 +1,98 @@
+@import "../bourbon/bourbon";
+
+.blue {
+  background-color: #5a97b4 !important;
+}
+.red {
+  background-color: #E46A6B !important;
+}
+.orange {
+  background-color: #D75813 !important;
+}
+.grey {
+  background-color: #868685 !important;
+}
+.green {
+  background-color: #607625 !important;
+}
+
+.player {
+  $player-height: 100px;
+  $player-padding: 30px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 10px;
+  width: 80%;
+  height: $player-height;
+  line-height: $player-height;
+  background: #5b48ff;
+  position: relative;
+  font-size: 80px;
+  .name {
+    display: inline-block;
+    padding-left: $player-padding;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .score {
+    display: inline-block;
+    margin-left: -4px;
+    text-align: right;
+    right: 2 * $player-height;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    padding-right: $player-padding;
+  }
+  .score-change {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: $player-height;
+    text-align: center;
+    &.up {
+      right: $player-height;
+    }
+  }
+}
+
+$transition-time: .5s;
+.fade-in-out {
+  &.ng-enter {
+    opacity: 0;
+    @include transition(opacity $transition-time);
+    &.ng-enter-active {
+      opacity: 1;
+    }
+  }
+  &.ng-leave {
+    opacity: 1;
+    @include transition(opacity $transition-time);
+    &.ng-leave-active {
+      opacity: 0;
+    }
+  }
+}
+.fade-in {
+  &.ng-enter {
+    opacity: 0;
+    @include transition(opacity $transition-time);
+    &.ng-enter-active {
+      opacity: 1;
+    }
+  }
+}
+
+.fade-out {
+  &.ng-leave {
+    opacity: 1;
+    @include transition(opacity $transition-time);
+    &.ng-leave-active {
+      opacity: 0;
+    }
+  }
+}

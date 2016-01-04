@@ -1,26 +1,32 @@
 <html lang="en" ng-app="darkReckoning">
 <head>
+    <!-- Angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+
+    <!-- UI Router -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+
+    <!-- Scripts -->
+    <!-- build:js js/js.js -->
+    <script src="app.js"></script>
+
+    <script src="main/main.js"></script>
+
+    <script src="players/players-service.js"></script>
+    <!-- endbuild -->
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Dark Reckoning</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Forum" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Actor" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="app.css">
 </head>
 <body>
-<div>
-    <h1>You did it. Good jorb.</h1>
-
-</div>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-
-<!-- build:js js/js.js -->
-<!--<script src="js/angular-local-storage.min.js"></script>-->
-
-<!--<script src="js/facts.js"></script>-->
-<!--<script src="js/app.js"></script>-->
-
-<!--<script src="js/controllers/main.js"></script>-->
-<!--<script src="js/controllers/facts.js"></script>-->
-<!-- endbuild -->
+    <div ui-view></div>
 </body>
 </html>
