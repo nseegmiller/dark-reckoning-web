@@ -64,7 +64,7 @@ gulp.task('styles', function () {
         // Do the sass compile and make sure we don't fail on errors
         .pipe(sass().on('error', sass.logError))
         // Concat into a single css file
-        .pipe(concat('app.css'))
+        .pipe(concat('main.css'))
         //catch errors
         .on('error', gutil.log)
         // Put main.css in the .tmp folder
@@ -93,7 +93,7 @@ gulp.task('video-deploy', function() {
 
 // This task does a sass compile, concatenation, minification, and copy for deployment
 gulp.task('styles-deploy', function () {
-    return gulp.src('app/styles/**/*.scss')
+    return gulp.src('app/**/*.scss')
         // Do the sass compile and make sure we don't fail on errors
         .pipe(sass())
         // Concat into a single css file

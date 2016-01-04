@@ -1,5 +1,5 @@
 angular.module('darkReckoning', ['darkReckoning.components', 'ngAnimate', 'ui.router'])
-    .config(
+    .config(['$stateProvider', '$urlRouterProvider',
         function($stateProvider, $urlRouterProvider) {
             $urlRouterProvider.otherwise('/');
             $stateProvider
@@ -9,6 +9,6 @@ angular.module('darkReckoning', ['darkReckoning.components', 'ngAnimate', 'ui.ro
                     controller: 'MainController as main'
                 })
         }
-    );
+    ]);
 
 angular.module('darkReckoning.components', []);

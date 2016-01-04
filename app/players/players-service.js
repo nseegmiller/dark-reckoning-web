@@ -1,4 +1,4 @@
-angular.module('darkReckoning.components').factory('Players',
+angular.module('darkReckoning.components').factory('Players', ['$timeout',
     function ($timeout) {
         var players = {
             playerList: []
@@ -25,4 +25,4 @@ angular.module('darkReckoning.components').factory('Players',
 
         return players;
     }
-);
+]);

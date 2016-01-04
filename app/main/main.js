@@ -1,4 +1,4 @@
-angular.module('darkReckoning.components').controller('MainController',
+angular.module('darkReckoning.components').controller('MainController', ['Players',
     function(Players) {
         var main = this;
         main.Players = Players;
@@ -8,4 +8,4 @@ angular.module('darkReckoning.components').controller('MainController',
         Players.addPlayer('Kate', 'grey');
         Players.addPlayer('Matt', 'green');
     }
-);
+]);
